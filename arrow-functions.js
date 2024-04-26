@@ -3,13 +3,13 @@
 // Vanilla JavaScript Functions
 
 
-// function addTwoNumbers(a, b) {
-//     // Code Block
-//     return a + b;
-// }
+function addTwoNumbers1 (a, b) {
+    // Code Block
+    return a + b;
+}
 
-// let sum = addTwoNumbers(3,5);
-// console.log(sum)
+let sum1 = addTwoNumbers1(3,5);
+console.log(sum1)
 
 
 // Arrow Functions with With Parameters
