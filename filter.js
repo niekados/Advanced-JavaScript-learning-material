@@ -64,3 +64,27 @@ const people = [
       ]
     },
   ];
+
+
+ // filter students with 5 year experience
+ 
+ const candidate1 = students.filter(student => {
+    let strongSkills = student.skills.filter(skill => skill.yrsExperience >= 5);
+    return strongSkills.length > 0;
+ });
+ console.log(candidate1);
+
+
+// ---------------- Extracting function outside the filter
+ const hasStrongSkills = student => {
+    let strongSkills = student.skills.filter(skill => skill.yrsExperience >= 5);
+    return strongSkills.length > 0;
+ }
+ const candidate2 = students.filter(hasStrongSkills);
+
+ // -------------- Extracting both functions
+ const has5yearsExp = skill => skill.yrsExperience >= 5;
+ const hasStrongSkills2 = student => student.skills.filter(has5yearsExp).length > 0;
+
+ const candidate3 = students.filter(hasStrongSkills2);
+ console.log(candidate3.map( names => names.name)); // returns only candidates names
